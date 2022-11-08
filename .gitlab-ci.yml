@@ -18,10 +18,6 @@ container_scanning:
   variables:
     CS_IMAGE: docker.io/library/amazonlinux:latest
 
-container_scanning:
-  variables:
-    CS_IMAGE: docker.io/library/amazonlinux:latest
-
 container_scanning_image2:
   extends: container_scanning
   variables:
@@ -30,9 +26,9 @@ container_scanning_image2:
 container_scanning_image3:
   extends: container_scanning
   variables:
-    CS_IMAGE: "rockylinux:latest"
+    CS_IMAGE: "docker.io/library/rockylinux:latest"
 
-container_scanning_image3:
+container_scanning_image4:
   extends: container_scanning
   variables:
     CS_IMAGE: "ubuntu:latest"
