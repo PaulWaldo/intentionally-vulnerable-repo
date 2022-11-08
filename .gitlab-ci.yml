@@ -16,7 +16,7 @@
 
 container_scanning:
   variables:
-    CS_IMAGE: public.ecr.aws/amazonlinux/amazonlinux:latest
+    CS_IMAGE: registry.hub.docker.com/library/amazonlinux:latest
 
 
 stages:
