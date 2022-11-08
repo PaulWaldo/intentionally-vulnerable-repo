@@ -6,8 +6,9 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 
-# container_scanning:
-#   variables:
+ container_scanning:
+   variables:
+     ["CI_REGISTRY_IMAGE"] = "public.ecr.aws/amazonlinux/amazonlinux:latest"
 #     DOCKER_IMAGE: ...
 #     DOCKER_USER: ...
 #     DOCKER_PASSWORD: ...
