@@ -6,12 +6,19 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 
- container_scanning:
-   variables:
-     ["CI_REGISTRY_IMAGE"] = "public.ecr.aws/amazonlinux/amazonlinux:latest"
+# container_scanning:
+#   variables:
+#     CI_REGISTRY_IMAGE = 'public.ecr.aws/amazonlinux/amazonlinux:latest'
 #     DOCKER_IMAGE: ...
 #     DOCKER_USER: ...
 #     DOCKER_PASSWORD: ...
+
+
+container_scanning:
+  variables:
+    CS_IMAGE: public.ecr.aws/amazonlinux/amazonlinux:latest
+
+
 stages:
 - test
 sast:
@@ -23,3 +30,7 @@ include:
 - template: Security/Dependency-Scanning.gitlab-ci.yml
 - template: Security/Secret-Detection.gitlab-ci.yml
 - template: Security/Container-Scanning.gitlab-ci.yml
+
+
+variables:
+  SECURE_LOG_LEVEL: 'debug'
