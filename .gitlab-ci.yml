@@ -25,23 +25,17 @@ container_scanning:
 container_scanning_image2:
   extends: container_scanning
   variables:
-    DOCKER_IMAGE: "python:latest"
-    DOCKER_USER: ""
-    DOCKER_PASSWORD: ""
+    CS_IMAGE: "python:latest"
 
 container_scanning_image3:
   extends: container_scanning
   variables:
-    DOCKER_IMAGE: "rockylinux:latest"
-    DOCKER_USER: ""
-    DOCKER_PASSWORD: ""
+    CS_IMAGE: "rockylinux:latest"
 
 container_scanning_image3:
   extends: container_scanning
   variables:
-    DOCKER_IMAGE: "ubuntu:latest"
-    DOCKER_USER: ""
-    DOCKER_PASSWORD: ""
+    CS_IMAGE: "ubuntu:latest"
 
 stages:
 - test
