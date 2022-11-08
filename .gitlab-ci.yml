@@ -16,8 +16,32 @@
 
 container_scanning:
   variables:
-    CS_IMAGE: registry.hub.docker.com/library/amazonlinux:latest
+    CS_IMAGE: docker.io/library/amazonlinux:latest
 
+container_scanning:
+  variables:
+    CS_IMAGE: docker.io/library/amazonlinux:latest
+
+container_scanning_image2:
+  extends: container_scanning
+  variables:
+    DOCKER_IMAGE: "python:latest"
+    DOCKER_USER: ""
+    DOCKER_PASSWORD: ""
+
+container_scanning_image3:
+  extends: container_scanning
+  variables:
+    DOCKER_IMAGE: "rockylinux:latest"
+    DOCKER_USER: ""
+    DOCKER_PASSWORD: ""
+
+container_scanning_image3:
+  extends: container_scanning
+  variables:
+    DOCKER_IMAGE: "ubuntu:latest"
+    DOCKER_USER: ""
+    DOCKER_PASSWORD: ""
 
 stages:
 - test
