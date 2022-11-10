@@ -22,6 +22,14 @@ enabled = true
 name = "docker"
 enabled = true
 
+  [analyzers.meta]
+  dockerfile_paths = [
+    "/docker/python",
+    "/docker/amazonlinux",
+    "/docker/rockylinux",
+    "/docker/ubuntu"
+  ]
+
 [[analyzers]]
 name = "sql"
 enabled = true
