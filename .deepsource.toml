@@ -23,7 +23,13 @@ name = "docker"
 enabled = true
 
   [analyzers.meta]
-  dockerfile_paths = ["/docker/Dockerfile"]
+  dockerfile_paths = [
+    "/docker/python",
+    "/docker/amazonlinux",
+    "/docker/rockylinux",
+    "/docker/ubuntu",
+    "/docker/Dockerfile"
+  ]
 
 [[analyzers]]
 name = "sql"
